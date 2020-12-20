@@ -1,0 +1,17 @@
+{
+  "name": "document_your_restapi_with_swagger",
+  "version": "1.0.0",
+  "description": "a simple nodejs api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon index.js"
+  },
+  "author": "Lemine",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "swagger-ui-express": "^4.1.5"
+  }
+}
