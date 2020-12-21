@@ -38,8 +38,48 @@
           "200": {
             "description": "Success !",
             "schema": {
-              "type":"string"
+              "type": "string"
             }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/user": {
+      "post": {
+        "tags": [
+          "logged_user"
+        ],
+        "summary": "The user's object to check for login operation",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "User",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "login": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success !"
           },
           "405": {
             "description": "Invalid input"
